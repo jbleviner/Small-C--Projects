@@ -1,25 +1,30 @@
-## Tic-Tac-Toe Mini Project
-##### Rules:
-1. Traditionally the first player plays with "X". So you can decide who wants to go "X" and who wants to go with "O". 
-2. Only one player can play at a time.
-3. If any of the players have filled a square then the other player and the same player cannot override that square.
-4. There are only two win conditions: draw or win.
-5. The player that succeeds in placing three respective mark (X or O) in a horizontal, vertical or diagonal row wins the game.
+# Tic-Tac-Toe Mini Project
+Welcome to **Tic-Tac-Toe**, a console-based implementation of the classic game! This program is designed to be flexible, allowing gameplay between two players, a player and a computer, or even two computers battling it out.
 
-##### Design Constraints:
-- [x] Use console to make a tic-tac-toe game
-- [x] First try to create game board using 2D array
-- [x] Eventually make it so the user can resize the game board
-- [x] Make it clear whose turn it is by displaying "Player X's Turn" or "Player O's Turn" at the start of each round.
-- [x] add selectable player symbols (X, O, and ' ' should be able to be something else)
-- [x] Add demo mode menu point for all 4 boards (show player 1 win conditions, player 2 win conditions and a draw condition)
-	- [x] make sure to use `CheckWin()` and `CheckDraw()` to validate conditions
-	- [x] keep it simple (hard code conditions if needed)
-	- [x] Animate the output window so it looks like an actual game is being played
-- [x] Make a computer opponent (1 with completely random numbers, 1 that's "smart")
-	- [x] add `ComputerMove()` method for each board
-	- [ ] either copy/paste `StartGame()` into a new method for computer vs. user or update `StartGame()` to include new `ComputerMove()` method
-- [x] add base class (properties might include `CurrentPlayer` and/or `Size`)
-- [x] Maybe make 2 computers play each other
-- [ ] When a player wins, you can highlight the winning row, column, or diagonal by printing those cells in a different color. Use `Console.ForegroundColor` to change the text color temporarily.
-- [ ] Add a leaderboard that gets read from and saved to a file
+## Game Rules:
+1. Players take turns placing their mark ('X' or 'O') on an empty square on the grid.
+2. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.
+3. If all squares are filled and no player has won, the game ends in a draw.
+4. Players cannot override a square once it is filled.
+
+## How to Play:
+1. Launch the program from the console or using an IDE such as Visual Studio.
+2. Select "Start New Game" from the main menu.
+3. Choose the game mode. (Player vs. Player, Player vs. CPU, CPU vs. CPU)
+5. Enter your moves in the format row column (e.g., 1 1 for the top-left corner).
+6. The game continues until there’s a winner or a draw.
+7. After the game ends, choose to replay or return to the main menu.
+
+## Features:
+- Customizable Board: Players can resize the game board beyond the default 3x3 size.
+- Selectable Player Symbols: Choose any symbol to represent each player (e.g., @ or #).
+- Computer Opponent: Play against a computer with two difficulty levels:
+	- Easy: Makes random moves.
+	- Hard: Plays strategically to win or block.
+- CPU vs. CPU Mode: Watch two computers play against each other.
+- Demo Mode: Simulates pre-determined games for each board type, showing win and draw conditions.
+
+## Technologies Used:
+- Language: C#
+- Framework: .NET Core
+- IDE: Visual Studio
